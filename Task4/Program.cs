@@ -54,13 +54,13 @@ void FindSecondMax(int[] array)
         }
     }
 
+    if (array[0] == array[array.Length - 1])
+    {
+        System.Console.WriteLine("Второго максимального числа в массиве не существует.");
+    }
+
     for (int i = 0; i < array.Length - 1; i++)
     {
-        if (array[i] == array[array.Length - 1])
-        {
-            System.Console.WriteLine("Второго максимального числа в массиве не существует.");
-            break;
-        }
         if (array[i] > array[i + 1])
         {
             System.Console.WriteLine($"Второе максимальное число в массиве = {array[i + 1]}");
